@@ -8,6 +8,7 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     min-height: 100vh;
     margin: 0;
@@ -19,7 +20,7 @@ h1 {
 }
 .filter-container {
     margin-top: 20px;
-    width: 80wv;
+    width: 80vw;
     max-width: 800px;
 }
 .filter {
