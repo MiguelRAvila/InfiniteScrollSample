@@ -22,3 +22,7 @@ h1 {
     width: 80wv;
     max-width: 800px;
 }
+.filter {
+    width: 100%;
+    padding: 12px;
+}
