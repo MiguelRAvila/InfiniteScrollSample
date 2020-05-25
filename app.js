@@ -10,3 +10,9 @@ async function getPosts() {
     const data = await res.json();
     return data;
 }
+
+async function showPosts() {
+    const posts = await getPosts();
+}
+
+showPosts();
