@@ -38,6 +38,19 @@ function showLoading() {
         }, 300);
     }, 1000);
 }
+function filterPosts(e) {
+    const term = e.target.value.toUpperCase();
+    const posts = document.querySelectorAll('.post');
+
+    posts.forEach(post => {
+        const title = post.querySelectorAll('.post-title').innerText;
+        const body = post.querySelectorAll('.post-body').innerText;
+
+        if(title.toUpperCase()) {
+            
+        }
+    });
+}
 showPosts();
 
 window.addEventListener('scroll', () => {
@@ -47,3 +60,5 @@ window.addEventListener('scroll', () => {
         showLoading();
     }
 });
+
+filter.addEventListener('input', filterPosts)
