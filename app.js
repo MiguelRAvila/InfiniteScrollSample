@@ -43,11 +43,13 @@ function filterPosts(e) {
     const posts = document.querySelectorAll('.post');
 
     posts.forEach(post => {
-        const title = post.querySelectorAll('.post-title').innerText;
-        const body = post.querySelectorAll('.post-body').innerText;
+        const title = post.querySelector('.post-title').innerText.toUpperCase();
+        const body = post.querySelector('.post-body').innerText.toUpperCase();
 
-        if(title.toUpperCase()) {
-            
+        if(title.indexOf(term) > -1 || body.indexOf(term) > -1) {
+            post.style.display = 'flex';
+        } else {
+            post.style.display = 'none';
         }
     });
 }
