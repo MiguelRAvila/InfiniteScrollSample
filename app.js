@@ -28,3 +28,11 @@ async function showPosts() {
 }
 
 showPosts();
+
+window.addEventListener('scroll', () => {
+    // console.log(document.documentElement.scrollTop);
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    if (scrollTop + clientHeight >= scrollHeight - 5) {
+
+    }
+});
