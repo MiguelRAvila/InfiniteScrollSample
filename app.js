@@ -28,6 +28,10 @@ async function showPosts() {
 }
 function showLoading() {
     loading.classList.add('show');
+
+    setTimeout(() => {
+        loading.classList.remove('show');
+    }, 1000);
 }
 showPosts();
 
