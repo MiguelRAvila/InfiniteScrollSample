@@ -2,7 +2,7 @@ const postsContainer = document.getElementById('post-container');
 const loading = document.querySelector('.loader');
 const filter = document.getElementById('filter');
 
-let limit = 5;
+let limit = 4;
 let page = 1;
 
 async function getPosts() {
@@ -31,6 +31,11 @@ function showLoading() {
 
     setTimeout(() => {
         loading.classList.remove('show');
+
+        setTimeout(() => {
+            page++;
+            showPosts();
+        }, 300);
     }, 1000);
 }
 showPosts();
